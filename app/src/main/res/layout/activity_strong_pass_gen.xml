@@ -7,12 +7,13 @@
     tools:context=".strongPassGen">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="370dp"
+        android:layout_height="579dp"
         android:layout_marginHorizontal="30dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -26,14 +27,24 @@
 
         <Button
             android:id="@+id/btn_copy"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:text="Copy" />
 
+        <Button
+            android:id="@+id/btn_gotopassman"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="go to password manager" />
+
         <LinearLayout
-            android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:orientation="vertical">
 
             <TextView
@@ -43,21 +54,24 @@
                 android:textColor="@color/black" />
 
             <CheckBox
-                android:checked="true"
                 android:id="@+id/check_lower"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:checked="true"
                 android:text="Lower Case" />
+
             <CheckBox
                 android:id="@+id/check_upper"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Upper Case" />
+
             <CheckBox
                 android:id="@+id/check_numeric"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Numeric Value" />
+
             <CheckBox
                 android:id="@+id/check_special_char"
                 android:layout_width="match_parent"
@@ -68,20 +82,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="Password Size"/>
+                    android:layout_weight="1"
+                    android:text="Password Size"
+                    android:textColor="@color/black" />
+
                 <EditText
-                    android:inputType="numberDecimal"
-                    android:gravity="center"
                     android:id="@+id/edit_pwd_size"
                     android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:text="8"
                     android:layout_height="wrap_content"
-                    android:hint="Password Size"/>
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:hint="Password Size"
+                    android:inputType="numberDecimal"
+                    android:text="8" />
             </LinearLayout>
 
             <TextView
@@ -89,21 +106,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="@color/red_danger"/>
+                android:textColor="@color/red_danger" />
 
             <Button
                 android:id="@+id/btn_generate"
-                android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Generate"/>
+                android:layout_marginTop="30dp"
+                android:text="Generate" />
 
         </LinearLayout>
-
-
-
-
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
